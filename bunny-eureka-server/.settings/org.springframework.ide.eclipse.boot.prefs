@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+spring.boot.launch.profile.history=spring.profiles.active\=peer1;--spring.profiles.active\=peer1;java -jar eureka-server-1.0.0.jar --spring.profiles.active\=peer1;

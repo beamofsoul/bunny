@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/beamofsoul/SpringCloudConfigServerRepository/ # 配置Git库位置
+          search-paths: # 配置库路径下的相对搜索位置，可以配置多个
+            - /config # 目录
+#          username: username # 公开的库可以不需要账号和密码
+#          password: password
+    
+server:
+  port: 7001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

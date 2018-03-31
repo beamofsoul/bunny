@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: bunny # 对应配置文件中的{application}部分
+  cloud:
+    config:
+      profile: dev # 对应配置文件中的{profile}部分
+#      label: master # 对应配置文件中的{label}部分
+#      uri: http://localhost:7001/ # 配置中心config-server的地址
+      discovery:
+        enabled: true # 可以通过服务名来访问ConfigServer
+        service-id: config-server # 在注册中心注册的ConfigServer的服务名
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: beamofsoul
+    password: 91297918
+    
+server:
+  port: 7002
+#  port: 7003
+
+encrypt:
+  key: 123456
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+management:
+  security:
+    enabled: false
